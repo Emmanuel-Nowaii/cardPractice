@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+        section {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            width: 300px;
+            background: #FFFFFF;
+            box-shadow: 0px 0px 20px rgba(0,0,0,.1);
+            border-radius: 20px;
+        }
+        .img {
+            position: relative;
+            overflow: hidden;
+        }
+        .img img {
+            width: 200px;
+            margin: auto;
+            margin-top: 25px;
+            display: block;
+            position: relative;
+            z-index: 2;
+        }
+        .img::before {
+            content: '';
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: turquoise;
+            border-radius: 50%;
+            top: -125px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        .img::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: rgba(128, 0, 128, .8);
+            border-radius: 50%;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+        .data-user {
+            padding: 15px;
+        }
+        .name-user h1 {
+            color: turquoise;
+        }
+        .name-user p {
+            font-size: 12px;
+        }
+        .social-user {
+            margin-top: 25px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .social-user {
+            text-align: center;
+        }
+        .social-user div p:nth-child(1) {
+            color: #858585;
+        }
+        .social-user div p:nth-child(2) {
+            font-weight: 900;
+            margin-top: 5px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="card">
+            <div class="img">
+                <img src="https://www.pngall.com/wp-content/uploads/2016/04/Happy-Person-Free-Download-PNG.png" alt="Man">
+            </div>
+            <div class="data-user">
+                <div class="name-user">
+                    <h1>David Smith</h1>
+                    <p>Frontend-Developer</p>
+                </div>
+                <div class="social-user">
+                    <div>
+                        <p>Aplied</p>
+                        <p>78</p>
+                    </div>
+                    <div>
+                        <p>Reviewed</p>
+                        <p>23</p>
+                    </div>
+                    <div>
+                        <p>Contacted</p>
+                        <p>14</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
